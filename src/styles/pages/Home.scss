@@ -1,0 +1,100 @@
+.Home-page{
+    //padding-top: toRem(204);
+
+    //@media (max-width: 1440px) {
+       // padding-top: toRem(150);
+    //}
+    //@media (max-width: 1000px) {
+        //padding-top: toRem(120);
+    //}
+    //@media (max-width: 500px) {
+        //padding: toRem(120) toRem(10) 0 toRem(10);
+    //}
+
+    &__body{
+        width: 100%;
+        margin: 0 auto;
+        
+        &__gist{
+            h1{
+                text-align: center;
+                margin: auto;
+                font-size: 4.5rem; 
+                font-weight: 700;
+                line-height: 4.5rem;
+                letter-spacing: -0.03em;
+                width: 33rem;
+                height: 10rem;
+                color:#18214D;
+                @media (max-width: 788px) {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    text-align: center;
+                    width: 20rem;
+                    height: 7rem;
+
+                }
+                @media (max-width: 480px) {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    text-align: center;
+                    width: 18rem;
+                    height: 7rem;
+                }
+            }
+            h3{
+                text-align: center;     
+                margin: auto;
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.75rem;
+                letter-spacing: -0.03em;
+                color:#3E4462;
+                width: 25rem;
+                height: 5.5rem;
+                margin-top: 0.5rem;
+                margin-bottom: 2rem;
+                @media (max-width: 788px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    height: 3rem;
+                }
+                @media (max-width: 480px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: center;
+                    word-wrap: break-word;
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
+
+.Home-page__body__inputs{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    @media (max-width: 500px) {
+        flex-wrap: wrap;
+    }
+}
+h4{
+    height: 20px;
+    font-weight: 400;
+    text-align: center;
+    font-size:14px;
+    line-height: 20px;
+    color:#3E4462;
+    letter-spacing: -0.03em;
+}
+.Home-page__body__inputs__suggested-repos{
+    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+}
