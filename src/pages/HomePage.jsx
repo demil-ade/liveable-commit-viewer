@@ -4,7 +4,7 @@ import CommitButton from "../components/Buttons/commitButton";
 import ReposButtons from "../components/Buttons/reposButtons";
 import TextInput from "../components/Inputs/TextInput";
 
-function Home(){
+function Homepage(){
     return(
         <div className="Home-page">
             
@@ -32,4 +32,4 @@ function Home(){
         </div>
     )
 }
-export default Home
+export default Homepage
