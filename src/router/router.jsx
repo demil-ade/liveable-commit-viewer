@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "../pages/HomePage";
 import Commits from "../pages/ViewCommits";
-import Loading from "../pages/ViewCommitsLoading";
+import NoPage from "../pages/NoPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 
@@ -10,8 +10,8 @@ function Router(){
         <BrowserRouter>
             <Routes>
                 <Route path= "/" element ={<Homepage/>} />
-                <Route path= "loading" element ={<Loading/>} />
-                <Route path ="commits" element ={<Commits/>} />
+                <Route path ="view-commits" element ={<Commits/>} />
+                <Route path="*" element ={<NoPage/>} />
             </Routes>
         </BrowserRouter>
     )

@@ -5,7 +5,12 @@
     border-radius: 8px;
     font-size: 20px;
     color: white;
-    @media (max-width: 500px){
+    border: 1px solid #F3663F;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 550px){
         width: 694px;
         height: 58px;
     }

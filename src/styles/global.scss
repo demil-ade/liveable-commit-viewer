@@ -1,18 +1,16 @@
 //Input
 @import './Inputs/TextInput.scss';
-@import './Inputs/TextInputTwo.scss';
+@import './Slices/search-commit-input.scss';
 
 //Buttons
 @import './Buttons/commit-button.scss';
 @import './Buttons/repos-buttons.scss';
-@import './Buttons/commit-button-two.scss';
 
 //Header
 @import './Header/header.scss';
 
 //Pages
 @import './pages/HomePage.scss';
-@import './pages/ViewCommitsLoading.scss';
 @import './pages/ViewCommits.scss';
 
 //Slices

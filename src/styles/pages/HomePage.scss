@@ -8,13 +8,16 @@
         margin: 0 auto;
         
         &__gist{
+            margin-top: 64px;
+            @media (max-width: 580px){
+                margin-top: auto;
+            }
             h1{
                 text-align: center;
                 margin: auto;
-                font-size: 4.5rem; 
+                font-size: 4rem; 
                 font-weight: 700;
                 line-height: 4.5rem;
-                letter-spacing: -0.03em;
                 width: 33rem;
                 height: 10rem;
                 color:#18214D;
@@ -30,7 +33,7 @@
                     font-size: 3rem;
                     line-height: 3rem;
                     text-align: center;
-                    width: 18rem;
+                    width: 20rem;
                     height: 7rem;
                 }
             }
@@ -45,7 +48,7 @@
                 width: 25rem;
                 height: 5.5rem;
                 margin-top: 0.5rem;
-                margin-bottom: 2rem;
+                margin-bottom: 3rem;
                 @media (max-width: 788px) {
                     font-size: 16px;
                     line-height: 20px;
@@ -69,7 +72,8 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-    @media (max-width: 500px) {
+    align-items: center;
+    @media (max-width: 550px) {
         flex-wrap: wrap;
     }
 }
@@ -85,7 +89,9 @@ h4{
 .Home-page__body__inputs__suggested-repos{
     gap: 1.5rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    margin-bottom: 20px;
     @media (max-width: 480px) {
         flex-wrap: wrap;
     }

@@ -1,40 +1,111 @@
+.commits-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#EFF2F6;
+        
+    @media (max-width: 580px) {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+}
+
+.website-name{
+    
+    height: 34px;
+    font-size: 28px;
+    color: #18214D;
+    margin-left: 10%;
+    font-weight: 700px;
+    @media (max-width: 580px) {
+        text-align: center;
+        margin-left: 50%;
+        margin-right: 50%;
+        height: 12px;
+    }
+    @media (max-width: 460px) {
+        text-align: center;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+    
+}
+
+.input-search{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 10%;
+    @media (max-width: 580px) {
+        flex-wrap: wrap;
+    }
+}
+
+h3{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 500px;
+}
+
 .commits-body{
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    
     &__profile{
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-top: 32px;
+        width: 300px;
+        
         .profile-container{
+            display: flex;
             width: 60px;
             height: 60px;
             background-color: #c4c4c4 ;
             border-radius: 50%;
             margin-bottom: 10px;
+            
         }
-        h3{
+        h5{
+            display: flex;
             color: #18214D;
             font-weight: 600;
-            font-size: 20px;
+            font-size: 22px;
+            text-align: center;
+            
+
         }
     }
 
     &__message{
         display: flex;
         flex-direction: row;
+        align-items: center;
         margin-top: 3rem;
-        font-size: 18px;
+        font-size: 20px;
+        justify-content: space-between;
 
         .message-one{
+            display: flex;
+            justify-content: center;
             color: #18214D;
             margin-left: 70px;
+            width: 500px;
+            font-size: 20px;
+            font-weight: 400;
         }
         .message-two{
             color: #18214D;
-            margin-left: 25rem;
+            margin-left: 15rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

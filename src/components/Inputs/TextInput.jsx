@@ -2,7 +2,10 @@ import React from "react";
 
 function TextInput(props){
     return(
-        <input placeholder ={props.placeholder} type={props.type} className="repos-input"/>
+        <span>
+        <i className ="fa fa-search icon"></i>
+        <input onChange={props.onChange} placeholder ={props.placeholder} type={props.type} className="repos-input"/>
+        </span>
     )
 }
 export default TextInput
