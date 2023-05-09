@@ -1,6 +1,5 @@
 //Input
 @import './Inputs/TextInput.scss';
-@import './Slices/search-commit-input.scss';
 
 //Buttons
 @import './Buttons/commit-button.scss';
@@ -12,6 +11,3 @@
 //Pages
 @import './pages/HomePage.scss';
 @import './pages/ViewCommits.scss';
-
-//Slices
-@import './Slices/ViewCommitsTop.scss';

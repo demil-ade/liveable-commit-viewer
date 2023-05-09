@@ -17,7 +17,7 @@ function Homepage(){
 
     const trendingRepos = async() => {
         try{
-            const response = await Api.get('https://api.github.com/search/repositories?q=Q/language:javacsript&sort=stars&per_page=4')
+            const response = await Api.get('https://api.github.com/search/repositories?q=language:javaScript+sort:stars&per_page=4')
             console.log(response.data)
             setFetchData(response.data.items)
         }
