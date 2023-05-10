@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Api from '../../api/api';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 function CommitButton(props) {
-  const {repo} = props;
+  return(
+    <button className='commit-button' onClick ={props.onClick}>{props.text}</button>
+  )
+  /*const {repo} = props;
   const [commits, setCommits] = useState([]);
 
   const router = useNavigate();
@@ -30,7 +31,7 @@ function CommitButton(props) {
     <>
         <div type='search' className='commit-button' onClick={() => handleSearchCommits()}>{props.text}</div>
     </>
-  )
+  )*/
 }
 
 export default CommitButton

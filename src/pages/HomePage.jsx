@@ -10,6 +10,8 @@ import TextInput from "../components/Inputs/TextInput";
 function Homepage(){
     const [fetchData, setFetchData] = useState([])
     const [repo, setRepo] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [commits, setCommits] = useState([])
 
     const handleChange = (e) => {
         setRepo(e.target.value)
@@ -23,6 +25,20 @@ function Homepage(){
         }
         catch(err){
             console.error(err)
+        }
+    }
+
+    const handleSearchCommits = async() => {
+        setLoading(true)
+        try{
+            const response = await Api.get('https://api.github.com/search/repositories?q=' + repo )
+            setCommits(response.data.items)
+        }
+        catch(err){
+            console.error(err)
+        }
+        finally{
+            setLoading(false)
         }
     }
     
@@ -43,22 +59,47 @@ function Homepage(){
                 </div>
                 <div className="Home-page__body__inputs">
                     <TextInput onChange={handleChange} placeholder ="Eg. facebook/react" type="text"/>
-                    <CommitButton text="See commits🚀" repo={repo}/>
+                    <CommitButton text="See commits🚀" onClick ={handleSearchCommits}/>
                 </div>
-                <h4>Or pick one of these suggested repos</h4>
+                {loading && <h4 className="isLoading">Loading...</h4>}
                 {
-                    fetchData.length > 0
+                    !loading && commits.length > 0
                     ?
-                fetchData.map((data) => {
+                    <h4 className="search-results">Search Results</h4>
+                    :
+                    ''
+                }
+                <div className="searches">
+                {
+                    commits.length > 0
+                    ?
+                commits.map((info) => {
                     return(
-                        <div className='Home-page__body__inputs__suggested-repos' key={data.id}>
-                            <ReposButtons to={data} text={data.name}  />
-                        </div>
+                        
+                            <ReposButtons className ='search-buttons' text ={info?.name} key ={info?.id} repo ={info.full_name} />
+                        
                     )
                 })
                 :
                 ''
                 }
+                </div>
+                <h4 className="suggested-repos">Or pick one of these suggested repos</h4>
+                <div className='Home-page__body__inputs__suggested-repos'> 
+                {
+                    fetchData.length > 0
+                    ?
+                fetchData.map((data) => {
+                    return(
+                        
+                        <ReposButtons className = 'trending' text={data?.name} key={data?.id} repo ={data.full_name} />
+                        
+                    )
+                })
+                :
+                ''
+                }
+                </div>
                 
             </div>
         </div>
