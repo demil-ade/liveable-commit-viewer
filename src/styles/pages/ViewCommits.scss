@@ -1,113 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+.whole-page{
+    font-family: 'Inter', sans-serif;
+    width:100%;
+    margin: 0 auto;
+}
+
 .commits-header{
+    background-color:#EFF2F6;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color:#EFF2F6;
-    padding-top: 30px;
-    padding-bottom: 30px;
-        
-    @media (max-width: 580px) {
-        flex-direction: column;
-        margin-top: 1rem;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+
+    @media (max-width: 1200px){
+        gap: 2rem;
+    }
+
+    @media(max-width:950px){
+        gap: 1rem;
+    }
+
+    @media(max-width:750px){
+        gap: 0.75rem;
     }
 }
 
 .website-name{
-    
-    height: 34px;
-    font-size: 28px;
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 700;
     color: #18214D;
-    margin-left: 10%;
-    font-weight: 700px;
-    @media (max-width: 580px) {
-        text-align: center;
-        margin-left: 50%;
-        margin-right: 50%;
-        height: 12px;
+
+    @media (max-width: 1000px) {
+        font-size: 1.25rem;
     }
-    @media (max-width: 460px) {
-        text-align: center;
-        margin-left: 50%;
-        margin-right: 50%;
+
+    @media (max-width: 735px) {
+        font-size: 1.75rem;
     }
-    
 }
 
 .input-search{
     display: flex;
-    justify-content: center;
     gap: 1rem;
     align-items: center;
-    margin-right: 10%;
-    @media (max-width: 580px) {
-        flex-wrap: wrap;
+
+    @media(max-width:950px){
+        gap: 0.5rem;
+    }
+
+    @media(max-width:750px){
+        gap: 0.35rem;
+    }
+
+    @media (max-width: 735px) {
+        display: none;
     }
 }
 
-h3{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-left: 500px;
-}
 
-.commits-body{
+.commit-body-wrapper{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     
+}
+
+
+.commits-body{
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+
+    @media (max-width: 1200px) {
+        margin-left: 1rem;
+    }
+    @media (max-width: 950px) {
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__profile{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 32px;
-        width: 300px;
+        margin-top: 2rem;
+        width: 18.75rem;
         
+        @media (max-width: 1200px) {
+            width: 12rem;
+        }
+        
+
         .profile-container{
             display: flex;
-            width: 60px;
-            height: 60px;
             background-color: #c4c4c4 ;
             border-radius: 50%;
-            margin-bottom: 10px;
+            width: 3.75rem;
+            height: 3.75rem;
+            margin-bottom: 0.625rem;
             
         }
-        h5{
-            display: flex;
+
+        .profile-name{
             color: #18214D;
             font-weight: 600;
-            font-size: 22px;
+            font-size: 1.375rem;
             text-align: center;
-            
 
+            @media (max-width: 850px) {
+                width: 10rem;
+                word-break: break-all;
+                font-size: 1rem;
+            }
+
+            @media (max-width: 750px) {
+                width: 8rem;
+                word-break: break-all;
+            }
+
+            @media (max-width: 710px) {
+                width: 6rem;
+                word-break: break-all;
+            }
         }
     }
 
     &__message{
         display: flex;
-        flex-direction: row;
-        align-items: center;
         margin-top: 3rem;
-        font-size: 20px;
-        justify-content: space-between;
+        gap: 10rem;
+
+        @media(max-width:1050px){
+            gap: 8rem;
+        }
+
+        @media(max-width:930px){
+            gap: 6rem;
+        }
 
         .message-one{
-            display: flex;
-            justify-content: center;
             color: #18214D;
-            margin-left: 70px;
-            width: 500px;
-            font-size: 20px;
+            width: 31.25rem;
+            font-size: 1.25rem;
             font-weight: 400;
+            word-break: break-all;
+
+            @media (max-width: 1200px) {
+                width: 28rem;
+            }
+
+            @media(max-width:1050px){
+                width: 23rem;
+            }
+
+            @media(max-width:930px){
+                width: 15rem;
+            }
+
+            /*@media(max-width:850px){
+                font-size: 15rem;
+            }*/
         }
+
         .message-two{
             color: #18214D;
-            margin-left: 15rem;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            word-break: break-all;
+            font-size: 1.25rem;
         }
     }
 }

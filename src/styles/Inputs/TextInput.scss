@@ -8,16 +8,26 @@
     border: 1px solid white;
     padding-left: 2.5rem;
 
-    @media (max-width: 850px){
-        width: 31.25rem;
+    @media (max-width: 1200px){
+        width: 37rem;
+    }
+
+    @media (max-width: 910px){
+        width: 28rem;
     }
     @media (max-width: 650px){
         width: 25rem;
+    }
+    @media (max-width: 460px) {
+        width: 25rem;
+    }
+    @media (max-width: 400px) {
+        width: 20rem;
     }
 }
 .icon{
     position: absolute;
     padding-top: 1.563rem;
     color: #18214D;
-    margin-left: 0.625rem;
+    padding-left: 0.625rem;
 }

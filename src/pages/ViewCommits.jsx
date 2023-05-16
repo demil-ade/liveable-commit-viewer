@@ -27,7 +27,7 @@ function Commits(){
     }, [])
 
     return(
-        <div>
+        <div className='whole-page'>
             <div className="commits-header">
                 <h2 className='website-name'>CommitViewer</h2>
                 <div className='input-search'>
@@ -36,8 +36,7 @@ function Commits(){
                 </div>
             </div>
             <h3>{commit?.name}</h3>
-            <div>
-
+           <div className='commit-body-wrapper'>
             {commits.map((commit, key) => {
               return(
                 <div className='commits-body' key={key}>
@@ -50,9 +49,11 @@ function Commits(){
                         <p className='message-two'>{commit.commit.committer.date}</p>
                     </div>
                 </div>
+            
               )
             })}
-            </div>   
+            </div>
+               
         </div>
     )
 }

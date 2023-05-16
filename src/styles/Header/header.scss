@@ -19,21 +19,25 @@
     }
 }
 
-.website-name{
+.website-nam{
     
-    height: 34px;
-    font-size: 28px;
+    height: 2.125rem;
+    font-size: 1.75rem;
     color: #18214D;
     margin-left: 10%;
-    font-weight: 700px;
+    font-weight: 700;
     @media (max-width: 580px) {
         text-align: center;
+        /*align-items: center;
+        justify-content: center;*/
         margin-left: 50%;
         margin-right: 50%;
         height: 12px;
     }
     @media (max-width: 460px) {
         text-align: center;
+        /*align-items: center;
+        justify-content: center;*/
         margin-left: 50%;
         margin-right: 50%;
     }
@@ -44,20 +48,21 @@
     align-items: center;
     margin-right: 10%;
     @media (max-width: 580px) {
+        margin-top: 2rem;
         margin-left: auto;
         margin-right: auto;
         height: 5rem;;
     }
 }
 .header-about{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
     color: #18214D;
-    
+    margin-left: 0px;
 }
 .header-contact{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-left: 5rem;
     color: #18214D;
     @media (max-width: 580px) {
