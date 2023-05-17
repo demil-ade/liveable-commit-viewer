@@ -76,7 +76,7 @@ function Homepage(){
                 commits.map((info) => {
                     return(
                         
-                        <ReposButtons className ='search-buttons' text ={info?.name} key ={info?.id} repo ={info.full_name} />
+                        <ReposButtons className ='search-buttons' text ={info?.full_name} key ={info?.id} repo ={info.full_name} />
                         
                     )
                 })
